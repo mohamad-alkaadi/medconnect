@@ -15,7 +15,7 @@ const ClientSidebar = () => {
           </div>
           <div className="">
             <p className="text-[13px] font-black">MedConnect</p>
-            <p className="-mt-1 text-[10px] font-medium">PATENT PORTAL</p>
+            <p className="-mt-1 text-[10px] font-medium">PATIENT PORTAL</p>
           </div>
         </div>
       }

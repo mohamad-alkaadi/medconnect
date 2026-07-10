@@ -11,8 +11,6 @@ const SidebarItem = ({
   itemTextColor,
   itemBackgroundColor,
   itemHoverBackgroundColor,
-  activeSidebarItem,
-  setActiveSidebarItem,
 }: {
   itemId: number;
   itemTitle: string;
