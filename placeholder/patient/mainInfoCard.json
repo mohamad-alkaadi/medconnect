@@ -1,0 +1,20 @@
+{
+  "name": "Max Mustermann",
+  "bloodType": "A-",
+  "birthDate": "1992-06-15",
+  "sex": "male",
+  "height": "172",
+  "weight": "78",
+  "organDonarType": "A-",
+  "primaryGeneralPractitioner": "Henry Wu",
+  "familyHistory": {
+    "father": ["Type-2 Diabetes", "Chronic Hypertension"],
+    "mother": ["Seasonal Bronchial Asthma"]
+  },
+  "address": "Friedrichstraße 100, 10117 Berlin",
+  "emergencyContract": {
+    "name": "Clara Mustermann",
+    "relation": "Spouse",
+    "phone": "+49 176 1234567"
+  }
+}
