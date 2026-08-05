@@ -1,0 +1,22 @@
+{
+  "allergies": {
+    "active": true,
+    "allergyList": ["Penicillin", "Peanuts", "Latex"]
+  },
+  "chronicConditions": {
+    "active": true,
+    "chronicConditionsList": ["Hypertension", "Mild Asthma"]
+  },
+  "prescriptions": [
+    {
+      "title": "Ramipril",
+      "dosage": "5mg",
+      "frequency": "Once daily in the morning"
+    },
+    {
+      "title": "Salbutamol Inhaler",
+      "dosage": "100mcg",
+      "frequency": "As needed for shortness of breath"
+    }
+  ]
+}
