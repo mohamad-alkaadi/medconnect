@@ -3,14 +3,17 @@
   "bloodType": "A-",
   "birthDate": "1992-06-15",
   "sex": "male",
-  "height": "172",
-  "weight": "78",
+  "height": 172,
+  "weight": 78,
   "organDonarType": "A-",
   "primaryGeneralPractitioner": "Henry Wu",
-  "familyHistory": {
-    "father": ["Type-2 Diabetes", "Chronic Hypertension"],
-    "mother": ["Seasonal Bronchial Asthma"]
-  },
+  "familyHistory": [
+    {
+      "parent": "father",
+      "diseases": ["Type-2 Diabetes", "Chronic Hypertension"]
+    },
+    { "parent": "mother", "diseases": ["Seasonal Bronchial Asthma"] }
+  ],
   "address": "Friedrichstraße 100, 10117 Berlin",
   "emergencyContract": {
     "name": "Clara Mustermann",
