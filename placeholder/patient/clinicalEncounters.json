@@ -1,0 +1,50 @@
+[
+  {
+    "id": "dkjllfsad",
+    "title": "Dermatological Assessment",
+    "date": "2026-06-25",
+    "orderedBy": {
+      "id": "sdsad",
+      "prefix": "Dr.",
+      "name": "Ellie Sattler",
+      "specialty": "Dermatology"
+    },
+    "attendedBy": {
+      "id": "cxzvf",
+      "prefix": "Dr.",
+      "name": "Ellie Sattler",
+      "specialty": "Dermatology"
+    },
+    "reportedSymptoms": "Persistent red, dry, scaly patch on upper back that is itchy and spreading slowly over 2 weeks.",
+    "clinicalReport": "Erythematous plaque with silvery scale noted on left upper scapular region. Query plaque psoriasis versus chronic nummular eczema. Patient instructed to obtain histopathology sample scan and complete blood chemistry panel prior to initiating targeted steroid cream.",
+    "additionalSections": [],
+    "preliminaryDiagnosis": {
+      "title": "Preliminary Diagnosis",
+      "color": "amber"
+    },
+    "eventBadge": {
+      "stage": true,
+      "stageInfo": {
+        "stageNum": 1
+      },
+      "title": "Initial Consultation",
+      "indicator": "pulse-amber"
+    },
+    "files": [
+      {
+        "id": "ccxm23",
+        "date": "2026-06-25",
+        "title": "Skin Biopsy Histopathology Report",
+        "status": "pending",
+        "review": ""
+      },
+      {
+        "id": "ccxm2ss3",
+        "date": "2026-06-25",
+        "title": "Complete Immunology Panel",
+        "status": "pending",
+        "review": ""
+      }
+    ]
+  }
+]
