@@ -5,7 +5,7 @@ import AdditionalInfoTitleAndParagraph from "./AdditionalInfoTitleAndParagraph";
 import info from "@/placeholder/patient/mainInfoCard.json";
 const MainInfoCard = () => {
   return (
-    <div className="bg-white rounded-lg">
+    <div className="bg-white rounded-lg w-full shadow-sm">
       <CardHeader
         name={info.name}
         dateOfBirth={info.birthDate}

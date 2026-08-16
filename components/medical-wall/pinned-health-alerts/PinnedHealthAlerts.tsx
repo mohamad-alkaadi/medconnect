@@ -4,7 +4,7 @@ import PinnedHealthSection from "./PinnedHealthSection";
 import healthAlerts from "@/placeholder/patient/pinnedHealthAlerts.json";
 const PinnedHealthAlerts = () => {
   return (
-    <div className="bg-white rounded-lg px-4 py-6">
+    <div className="bg-white rounded-lg px-4 py-6 shadow-sm">
       <div className="flex justify-start items-center space-x-2 border-b border-slate-100 pb-2 mb-2">
         <FiAlertTriangle className="text-red-600 text-[18px]" />
         <p className="font-bold text-[16px]">Pinned Health Alerts</p>

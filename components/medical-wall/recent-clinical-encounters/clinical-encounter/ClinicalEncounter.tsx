@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import ClinicalEncounterBadge from "./ClinicalEncounterBadge";
 type ClinicalEncounterType = {
   id: string;
   title: string;
@@ -44,16 +46,22 @@ const ClinicalEncounter = ({
 }: {
   clinicalEncountersItem: ClinicalEncounterType;
 }) => {
+  const [collapse, setCollapse] = useState<boolean>(false);
   return (
-    <div className="ml-3 pl-6">
+    <div className="ml-3 pl-6 col-span-2 mb-4">
       <div className="flex justify-between items-center mb-1">
         <p className="text-slate-500 text-xs font-mono font-semibold">
-          2026-06-25
+          {clinicalEncountersItem.date}
         </p>
-        <div className="border border-amber-200 rounded-full text-xs flex justify-center items-center px-2 bg-[#fef3c6] text-amber-800 font-semibold">
-          <p className="w-2 h-2 bg-amber-500 rounded-full animate-ping mr-1"></p>
-          Stage 1: Initial Consultation
-        </div>
+        <ClinicalEncounterBadge
+          indicator={"amber-pulse"}
+          title={"Initial Consultation"}
+          stageNum={
+            clinicalEncountersItem.eventBadge.stage
+              ? clinicalEncountersItem.eventBadge.stageInfo.stageNum
+              : null
+          }
+        />
       </div>
       <div className="flex justify-between mb-3">
         <div>
@@ -66,12 +74,18 @@ const ClinicalEncounter = ({
             (Dermatology)
           </p>
         </div>
-        <button className="text-indigo-700 hover:text-indigo-900 cursor-pointer border border-[#e2e8f0] bg-[#f1f5f9] h-fit rounded-lg px-3 text-[12px] font-bold flex justify-center items-center space-x-2">
-          <p>Collapse</p>
-          <p>-</p>
+        <button
+          onClick={() => setCollapse(!collapse)}
+          className="text-indigo-700 hover:text-indigo-900 cursor-pointer border border-[#e2e8f0] bg-[#f1f5f9] h-fit rounded-lg px-3 text-[12px] font-bold flex justify-center items-center space-x-2"
+        >
+          <p>{collapse ? "Expand" : "Collapse"}</p>
+          <p>{collapse ? "+" : "-"}</p>
         </button>
       </div>
-      <div className="border rounded-lg bg-[#f8fafc] p-4">
+      <div
+        className="border rounded-lg bg-[#f8fafc] p-4"
+        style={{ display: collapse ? "none" : "block" }}
+      >
         <h4 className="text-[10px] uppercase font-bold text-slate-400 mb-1">
           Reported Symptoms
         </h4>

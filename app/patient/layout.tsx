@@ -10,9 +10,11 @@ export default function PatientDashboard({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div className="flex">
+    <div className="flex ">
       <ClientSidebar />
-      <div className="bg-[#f4f7fa] w-full">{children}</div>
+      <div className="bg-[#f4f7fa] w-full h-screen overflow-auto">
+        {children}
+      </div>
     </div>
   );
 }

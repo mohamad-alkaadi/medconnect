@@ -4,11 +4,11 @@ import RecentClinicalEncounters from "@/components/medical-wall/recent-clinical-
 
 const page = () => {
   return (
-    <div className="h-screen flex justify-start items-center space-x-1.5 bg-[#eef2ff] px-3 py-1.5 rounded-lg">
-      {/* <div className="flex flex-col space-y-5">
+    <div className="lg:h-screen py-6 w-full flex max-lg:flex-col justify-center items-start lg:space-x-4 max-lg:space-y-4 bg-[#eef2ff] px-3 py-1.5 rounded-lg overflow-auto">
+      <div className="flex flex-col space-y-4 max-lg:w-full">
         <MainInfoCard />
         <PinnedHealthAlerts />
-      </div> */}
+      </div>
       <RecentClinicalEncounters />
     </div>
   );

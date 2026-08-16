@@ -4,7 +4,7 @@ import Link from "next/link";
 import clinicalEncounters from "@/placeholder/patient/clinicalEncounters.json";
 const RecentClinicalEncounters = () => {
   return (
-    <div className="bg-white rounded-lg px-6 py-7 max-w-[850px]">
+    <div className="bg-white rounded-lg px-6 py-7 lg:max-w-[850px] lg:flex-auto max-lg:w-full h-fit max-h-[80vh] overflow-auto shadow-sm">
       <div className="border-b border-slate-100 mb-6 pb-3 flex justify-between items-center">
         <div>
           <h2 className="font-black text-slate-850 tracking-tight">
@@ -21,9 +21,11 @@ const RecentClinicalEncounters = () => {
           Full History →
         </Link>
       </div>
-      {clinicalEncounters.slice(0, 2).map((item, index) => (
-        <ClinicalEncounter key={index} clinicalEncountersItem={item} />
-      ))}
+      <div className="border-l-2 border-slate-100">
+        {clinicalEncounters.slice(0, 2).map((item, index) => (
+          <ClinicalEncounter key={index} clinicalEncountersItem={item} />
+        ))}
+      </div>
     </div>
   );
 };
