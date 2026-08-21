@@ -35,11 +35,13 @@ export type ClinicalEncounterType = {
     title: string;
     indicator: string;
   };
-  files: {
-    id: string;
-    date: string;
-    title: string;
-    status: string;
-    review: string;
-  }[];
+  files: file[];
+};
+
+export type file = {
+  id: string;
+  date: string;
+  title: string;
+  status: string;
+  review: string;
 };

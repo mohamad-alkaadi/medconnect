@@ -1,9 +1,11 @@
 import React from "react";
 
 const ClinicalEncounterButton = ({
+  id,
   title,
   status,
 }: {
+  id: string;
   title: string;
   status: string;
 }) => {
@@ -11,7 +13,7 @@ const ClinicalEncounterButton = ({
     <div className="border rounded-xl px-3 py-4 bg-slate-100 flex-1 min-w-[200px] flex flex-col justify-between">
       <div className="flex justify-between mb-2 space-x-3">
         <p className="text-xs leading-tight text-slate-700 font-bold">
-          Skin Biopsy Histopathology Report
+          {title}
         </p>
         <p className="bg-slate-200 rounded-md px-1 py-1 text-slate-600 h-fit uppercase text-[9px] font-extrabold px-">
           {status}

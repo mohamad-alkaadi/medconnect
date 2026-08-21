@@ -23,7 +23,12 @@
     },
     "reportedSymptoms": "Persistent red, dry, scaly patch on upper back that is itchy and spreading slowly over 2 weeks.",
     "clinicalReport": "Erythematous plaque with silvery scale noted on left upper scapular region. Query plaque psoriasis versus chronic nummular eczema. Patient instructed to obtain histopathology sample scan and complete blood chemistry panel prior to initiating targeted steroid cream.",
-    "additionalSections": [],
+    "additionalSections": [
+      {
+        "sectionTitle": "additional title",
+        "sectionParagraph": "dsakldjs lksajdlksajd sadlkjsad"
+      }
+    ],
     "preliminaryDiagnosis": {
       "title": "Preliminary Diagnosis",
       "color": "amber"

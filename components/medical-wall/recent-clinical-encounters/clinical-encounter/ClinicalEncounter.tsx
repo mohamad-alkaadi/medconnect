@@ -6,6 +6,7 @@ import ClinicalEncounterLabeledContentBlock from "./ClinicalEncounterLabeledCont
 import ClinicalEncounterPreliminaryDiagnosis from "./ClinicalEncounterPreliminaryDiagnosis";
 import ClinicalEncounterActions from "./ClinicalEncounterActions";
 import ClinicalEncounterCollapseButton from "./ClinicalEncounterCollapseButton";
+import { randomUUID } from "crypto";
 
 const ClinicalEncounter = ({
   clinicalEncountersItem,
@@ -65,13 +66,21 @@ const ClinicalEncounter = ({
             "Erythematous plaque with silvery scale noted on left upper scapular region. Query plaque psoriasis versus chronic nummular eczema. Patient instructed to obtain histopathology sample scan and complete blood chemistry panel prior to initiating targeted steroid cream."
           }
         />
+        {clinicalEncountersItem.additionalSections.length > 0 &&
+          clinicalEncountersItem.additionalSections.map((item) => (
+            <ClinicalEncounterLabeledContentBlock
+              key={crypto.randomUUID.toString()}
+              title={item.sectionTitle}
+              paragraph={item.sectionParagraph}
+            />
+          ))}
 
         <ClinicalEncounterPreliminaryDiagnosis
           diagnosis={"Query Psoriasis / Eczema"}
           color={"amber"}
         />
 
-        <ClinicalEncounterActions />
+        <ClinicalEncounterActions files={clinicalEncountersItem.files} />
       </div>
     </div>
   );
