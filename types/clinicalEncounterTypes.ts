@@ -2,24 +2,9 @@ export type ClinicalEncounterType = {
   id: string;
   title: string;
   date: string;
-  assessmentBy: {
-    id: string;
-    prefix: string;
-    name: string;
-    specialty: string;
-  };
-  orderedBy: {
-    id: string;
-    prefix: string;
-    name: string;
-    specialty: string;
-  };
-  attendedBy: {
-    id: string;
-    prefix: string;
-    name: string;
-    specialty: string;
-  };
+  assessmentBy: DoctorDetailsType;
+  orderedBy: DoctorDetailsType;
+  attendedBy: DoctorDetailsType;
   reportedSymptoms: string;
   clinicalReport: string;
   additionalSections: { sectionTitle: string; sectionParagraph: string }[];
@@ -35,13 +20,27 @@ export type ClinicalEncounterType = {
     title: string;
     indicator: string;
   };
-  files: file[];
+  prescription: PrescriptionType[];
+  files: FileType[];
 };
 
-export type file = {
+export type FileType = {
   id: string;
   date: string;
   title: string;
   status: string;
   review: string;
+};
+export type DoctorDetailsType = {
+  id: string;
+  prefix: string;
+  name: string;
+  specialty: string;
+};
+
+export type PrescriptionType = {
+  id: string;
+  prescriptionTitle: string;
+  dosage: string;
+  frequency: string;
 };

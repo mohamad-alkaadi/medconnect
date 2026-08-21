@@ -10,13 +10,13 @@
       "specialty": "Dermatology"
     },
     "orderedBy": {
-      "id": "sdsad",
+      "id": "sds32ad",
       "prefix": "Dr.",
-      "name": "Ellie Sattler",
+      "name": "Ellie Mohamad",
       "specialty": "Dermatology"
     },
     "attendedBy": {
-      "id": "cxzvf",
+      "id": "sdsad",
       "prefix": "Dr.",
       "name": "Ellie Sattler",
       "specialty": "Dermatology"
@@ -41,6 +41,26 @@
       "title": "Initial Consultation",
       "indicator": "pulse-amber"
     },
+    "prescription": [
+      {
+        "id": "cmxwnciq",
+        "prescriptionTitle": "Aspirin",
+        "dosage": "1 pill",
+        "frequency": "24 hours"
+      },
+      {
+        "id": "sjfhakjd",
+        "prescriptionTitle": "Aspirin",
+        "dosage": "1 pill",
+        "frequency": "24 hours"
+      },
+      {
+        "id": "sjfhaxxkjd",
+        "prescriptionTitle": "Aspirin",
+        "dosage": "1 pill",
+        "frequency": "24 hours"
+      }
+    ],
     "files": [
       {
         "id": "ccxm23",

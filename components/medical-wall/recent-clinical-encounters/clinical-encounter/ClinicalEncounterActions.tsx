@@ -1,4 +1,3 @@
-import React from "react";
 import ClinicalEncounterButton from "./ClinicalEncounterButton";
 import { file } from "@/types/clinicalEncounterTypes";
 

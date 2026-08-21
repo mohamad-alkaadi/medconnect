@@ -6,8 +6,13 @@ import ClinicalEncounterLabeledContentBlock from "./ClinicalEncounterLabeledCont
 import ClinicalEncounterPreliminaryDiagnosis from "./ClinicalEncounterPreliminaryDiagnosis";
 import ClinicalEncounterActions from "./ClinicalEncounterActions";
 import ClinicalEncounterCollapseButton from "./ClinicalEncounterCollapseButton";
-import { randomUUID } from "crypto";
+import ClinicalEncounterPrescription from "./ClinicalEncounterPrescription";
+import ClinicalEncounterAssessmentOrderedAttended from "./ClinicalEncounterAssessmentOrderedAttended";
 
+// if a patient is going for a clinic there is two mandatory sections
+// Reported Symptoms and Reported Symptoms
+// if a patient is going for a sugary there is two mandatory sections
+// Procedure Details and Discharge Summary
 const ClinicalEncounter = ({
   clinicalEncountersItem,
 }: {
@@ -31,19 +36,11 @@ const ClinicalEncounter = ({
         />
       </div>
       <div className="flex justify-between mb-3">
-        <div>
-          <h3 className="font-bold text-slate-800">
-            {`${clinicalEncountersItem.assessmentBy.prefix} ${clinicalEncountersItem.assessmentBy.name} (${clinicalEncountersItem.assessmentBy.specialty}) `}
-            Assessment
-          </h3>
-          <p className=" text-slate-500">
-            Ordered / Attended by:
-            <span className="text-black font-semibold">
-              {` ${clinicalEncountersItem.assessmentBy.prefix} ${clinicalEncountersItem.assessmentBy.name} `}
-            </span>
-            ({clinicalEncountersItem.assessmentBy.specialty})
-          </p>
-        </div>
+        <ClinicalEncounterAssessmentOrderedAttended
+          assessment={clinicalEncountersItem.assessmentBy}
+          ordered={clinicalEncountersItem.orderedBy}
+          attended={clinicalEncountersItem.attendedBy}
+        />
 
         <ClinicalEncounterCollapseButton
           collapse={collapse}
@@ -80,7 +77,15 @@ const ClinicalEncounter = ({
           color={"amber"}
         />
 
-        <ClinicalEncounterActions files={clinicalEncountersItem.files} />
+        {clinicalEncountersItem.prescription.length > 0 && (
+          <ClinicalEncounterPrescription
+            prescription={clinicalEncountersItem.prescription}
+          />
+        )}
+
+        {clinicalEncountersItem.files.length > 0 && (
+          <ClinicalEncounterActions files={clinicalEncountersItem.files} />
+        )}
       </div>
     </div>
   );
