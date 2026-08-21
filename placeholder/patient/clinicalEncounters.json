@@ -3,6 +3,12 @@
     "id": "dkjllfsad",
     "title": "Dermatological Assessment",
     "date": "2026-06-25",
+    "assessmentBy": {
+      "id": "sdsad",
+      "prefix": "Dr.",
+      "name": "Ellie Sattler",
+      "specialty": "Dermatology"
+    },
     "orderedBy": {
       "id": "sdsad",
       "prefix": "Dr.",

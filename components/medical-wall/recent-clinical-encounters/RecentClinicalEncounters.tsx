@@ -16,7 +16,7 @@ const RecentClinicalEncounters = () => {
         </div>
         <Link
           href="/patient/history"
-          className="hover:text-indigo-800 hover:underline cursor-pointer "
+          className="hover:text-blue-700 hover:underline cursor-pointer "
         >
           Full History →
         </Link>

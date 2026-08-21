@@ -2,6 +2,12 @@ export type ClinicalEncounterType = {
   id: string;
   title: string;
   date: string;
+  assessmentBy: {
+    id: string;
+    prefix: string;
+    name: string;
+    specialty: string;
+  };
   orderedBy: {
     id: string;
     prefix: string;

@@ -31,13 +31,16 @@ const ClinicalEncounter = ({
       </div>
       <div className="flex justify-between mb-3">
         <div>
-          <h3 className="font-bold  text-slate-800">
-            Dr. Ellie Sattler Assessment
+          <h3 className="font-bold text-slate-800">
+            {`${clinicalEncountersItem.assessmentBy.prefix} ${clinicalEncountersItem.assessmentBy.name} (${clinicalEncountersItem.assessmentBy.specialty}) `}
+            Assessment
           </h3>
           <p className=" text-slate-500">
             Ordered / Attended by:
-            <span className="text-black font-semibold"> Dr. Ellie Sattler</span>
-            (Dermatology)
+            <span className="text-black font-semibold">
+              {` ${clinicalEncountersItem.assessmentBy.prefix} ${clinicalEncountersItem.assessmentBy.name} `}
+            </span>
+            ({clinicalEncountersItem.assessmentBy.specialty})
           </p>
         </div>
 
