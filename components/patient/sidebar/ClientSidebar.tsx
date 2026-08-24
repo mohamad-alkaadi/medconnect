@@ -1,6 +1,6 @@
 "use client";
 
-import { sidebarItems } from "@/constants/sidebarItems";
+import { sidebarItems } from "@/constants/patient/sidebarItems";
 import Sidebar from "./Sidebar";
 import preferences from "@/placeholder/patient/preferences.json";
 

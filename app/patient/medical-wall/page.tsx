@@ -1,6 +1,6 @@
-import MainInfoCard from "@/components/medical-wall/main-info-card/MainInfoCard";
-import PinnedHealthAlerts from "@/components/medical-wall/pinned-health-alerts/PinnedHealthAlerts";
-import RecentClinicalEncounters from "@/components/medical-wall/recent-clinical-encounters/RecentClinicalEncounters";
+import MainInfoCard from "@/components/patient/medical-wall/main-info-card/MainInfoCard";
+import PinnedHealthAlerts from "@/components/patient/medical-wall/pinned-health-alerts/PinnedHealthAlerts";
+import RecentClinicalEncounters from "@/components/patient/medical-wall/recent-clinical-encounters/RecentClinicalEncounters";
 
 const page = () => {
   return (

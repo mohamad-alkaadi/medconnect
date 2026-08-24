@@ -1,4 +1,4 @@
-import ClientSidebar from "@/components/sidebar/ClientSidebar";
+import ClientSidebar from "@/components/patient/sidebar/ClientSidebar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

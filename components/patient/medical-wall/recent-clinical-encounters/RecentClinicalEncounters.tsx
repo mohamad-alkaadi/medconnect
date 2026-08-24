@@ -1,5 +1,5 @@
 import React from "react";
-import ClinicalEncounter from "./clinical-encounter/ClinicalEncounter";
+import ClinicalEncounter from "../../common/clinical-encounter/ClinicalEncounter";
 import Link from "next/link";
 import clinicalEncounters from "@/placeholder/patient/clinicalEncounters.json";
 const RecentClinicalEncounters = () => {
