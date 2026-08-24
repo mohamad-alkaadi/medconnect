@@ -35,7 +35,7 @@ const MedicalHistory = () => {
   const [keywordSearch, setKeywordSearch] = useState<string>("");
 
   return (
-    <div className="bg-white rounded-lg px-6 py-7 lg:max-w-[850px] lg:flex-auto max-lg:w-full h-fit max-h-[80vh] overflow-auto shadow-sm">
+    <div className="bg-white rounded-lg px-6 py-7 lg:max-w-[850px] lg:flex-auto max-lg:w-full h-fit max-h-[90vh] shadow-sm">
       <div className="border-b border-slate-100 mb-6 pb-3 flex justify-between items-center">
         <div>
           <h2 className="font-black text-slate-850 tracking-tight">
@@ -177,7 +177,7 @@ const MedicalHistory = () => {
           </button>
         </div>
       </div>
-      <div className="border-l-2 border-slate-100">
+      <div className="border-l-2 border-slate-100 overflow-auto h-[60vh]">
         {clinicalEncounters.slice(0, 2).map((item, index) => (
           <ClinicalEncounter key={index} clinicalEncountersItem={item} />
         ))}
