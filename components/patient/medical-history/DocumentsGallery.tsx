@@ -1,32 +1,22 @@
 "use client";
-import ClinicalEncounter from "../common/clinical-encounter/ClinicalEncounter";
-import clinicalEncounters from "@/placeholder/patient/clinicalEncounters.json";
 import { useState } from "react";
-
-import MedicalHistoryFilter from "./MedicalHistoryFilter";
 import SortDropdown from "./SortDropdown";
+import MedicalHistoryFilter from "./MedicalHistoryFilter";
+import documentsList from "@/placeholder/patient/documents.json";
+import DocumentItem from "./DocumentItem";
 
-const MedicalHistory = () => {
+const DocumentsGallery = () => {
   const [sortByNewFirst, setSortByNewFirst] = useState<boolean>(true);
   const [startDate, setStartDate] = useState<Date>();
   const [endDate, setEndDate] = useState<Date>();
-  const [specialistsArray, setSpecialistArray] = useState<string[]>([
-    "cardiology",
-    "dermatology",
-  ]);
-  const [specialist, setSpecialist] = useState<string>("");
   const [keywordSearch, setKeywordSearch] = useState<string>("");
-
   return (
     <div className="bg-white rounded-lg px-6 py-7 lg:max-w-[850px] lg:flex-auto max-lg:w-full h-fit max-h-[90vh] shadow-sm">
       <div className="border-b border-slate-100 mb-6 pb-3 flex justify-between items-center">
         <div>
           <h2 className="font-black text-slate-850 tracking-tight">
-            Medical History
+            Documents Gallery
           </h2>
-          <p className="text-xs text-slate-500">
-            Your checkups, logs, and diagnoses.
-          </p>
         </div>
         <SortDropdown
           sortByNewFirst={sortByNewFirst}
@@ -38,18 +28,17 @@ const MedicalHistory = () => {
         setStartDate={setStartDate}
         endDate={endDate}
         setEndDate={setEndDate}
-        specialist={specialist}
-        specialistsArray={specialistsArray}
         keywordSearch={keywordSearch}
-        setSpecialist={setSpecialist}
       />
-      <div className="border-l-2 pr-4 border-slate-100 overflow-auto max-h-[60vh]">
-        {clinicalEncounters.slice(0, 2).map((item, index) => (
-          <ClinicalEncounter key={index} clinicalEncountersItem={item} />
-        ))}
+      <div>
+        <div className="pr-1 border-slate-100 overflow-auto max-h-[30vh]">
+          {documentsList.slice(0, 2).map((item) => (
+            <DocumentItem key={item.id} documentItem={item} />
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default MedicalHistory;
+export default DocumentsGallery;

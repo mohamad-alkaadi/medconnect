@@ -9,7 +9,8 @@ import {
 import { Button } from "@/components/ui/button";
 
 import { IoIosArrowDown } from "react-icons/io";
-const MedicalHistorySort = ({
+
+const SortDropdown = ({
   sortByNewFirst,
   setSortByNewFirst,
 }: {
@@ -49,4 +50,4 @@ const MedicalHistorySort = ({
   );
 };
 
-export default MedicalHistorySort;
+export default SortDropdown;

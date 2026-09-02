@@ -44,3 +44,14 @@ export type PrescriptionType = {
   dosage: string;
   frequency: string;
 };
+
+export type DocumentType = {
+  id: string;
+  title: string;
+  date: string;
+  orderedBy: DoctorDetailsType;
+  reviewedBy: DoctorDetailsType;
+  review: string;
+  reviewed: boolean;
+  status: string;
+};

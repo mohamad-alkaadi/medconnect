@@ -1,6 +1,6 @@
-import React, { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { Calendar } from "@/components/ui/calendar";
-import { Field, FieldDescription, FieldLabel } from "@/components/ui/field";
+import { Field } from "@/components/ui/field";
 import {
   Popover,
   PopoverContent,
@@ -24,19 +24,19 @@ const MedicalHistoryFilter = ({
   setStartDate,
   endDate,
   setEndDate,
-  specialist,
-  specialistsArray,
   keywordSearch,
+  specialistsArray,
+  specialist,
   setSpecialist,
 }: {
   startDate: Date | undefined;
   setStartDate: Dispatch<SetStateAction<Date | undefined>>;
   endDate: Date | undefined;
   setEndDate: Dispatch<SetStateAction<Date | undefined>>;
-  specialist: string;
-  specialistsArray: string[];
   keywordSearch: string;
-  setSpecialist: Dispatch<SetStateAction<string>>;
+  specialistsArray?: string[];
+  specialist?: string;
+  setSpecialist?: Dispatch<SetStateAction<string>>;
 }) => {
   return (
     <div className="w-full flex flex-col space-y-1 bg-[#f8fafc] border border-slate-200 rounded-md mb-4 px-4 py-3">
@@ -93,7 +93,7 @@ const MedicalHistoryFilter = ({
           </Popover>
         </Field>
       </div>
-      <div className="grid grid-cols-2 gap-1">
+      <div className={`grid ${specialistsArray && "grid-cols-2 gap-1"}`}>
         <Field>
           <Input
             id="input-field-username"
@@ -102,30 +102,32 @@ const MedicalHistoryFilter = ({
             className="placeholder:text-black bg-white rounded-md"
           />
         </Field>
-        <DropdownMenu>
-          <DropdownMenuTrigger
-            render={
-              <Button className="border text-center rounded-md border-slate-200 bg-white hover:bg-white text-black font-normal cursor-pointer flex justify-between capitalize" />
-            }
-          >
-            {specialist === "" ? "Select a Specialist" : specialist}
-            <IoIosArrowDown />
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="bg-white rounded-md ring-slate-200">
-            <DropdownMenuGroup>
-              {specialistsArray.map((item) => (
-                <DropdownMenuItem
-                  key={crypto.randomUUID()}
-                  onClick={() => setSpecialist(item)}
-                  disabled={keywordSearch === item}
-                  className="capitalize"
-                >
-                  {item}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuGroup>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        {specialistsArray && (
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              render={
+                <Button className="border text-center rounded-md border-slate-200 bg-white hover:bg-white text-black font-normal cursor-pointer flex justify-between capitalize" />
+              }
+            >
+              {specialist === "" ? "Select a Specialist" : specialist}
+              <IoIosArrowDown />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-white rounded-md ring-slate-200">
+              <DropdownMenuGroup>
+                {specialistsArray.map((item) => (
+                  <DropdownMenuItem
+                    key={crypto.randomUUID()}
+                    onClick={() => setSpecialist(item)}
+                    disabled={keywordSearch === item}
+                    className="capitalize"
+                  >
+                    {item}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuGroup>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        )}
       </div>
       <div className="flex space-x-2">
         <button
